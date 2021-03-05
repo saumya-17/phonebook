@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid bg-1 text-center">
+        <h2 class="margin"><b>PHONEBOOK  </b>
+            <span class="glyphicon glyphicon-phone"></span>
+        </h2>
+    </div>
+
+    <br><br><br>
+
+    <div class="container-fluid text-center">
+        <button class="btn btn-default btn-lg" style="width: 400px; margin: 0%; text-align: left;">
+            <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Mobile No.</th>
+                <th>Edit / Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let contact of contact">
+                <td>{{contact.firstname}}</td>
+                <td>{{contact.lastname}}</td>
+                <td>{{contact.mobile_no}}</td>
+                <td><button><span class="glyphicon glyphicon-pencil"></span></button> / 
+                    <button><span class="glyphicon glyphicon-minus"></span></button>
+                </td>
+              </tr>  
+              <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><button class="btn btn-info" style="color: black; ">
+                    <b>Add Contact</b></button></td>
+              </tr>    
+            </tbody>
+          </table>
+    </div>
+
+    <br><br><br>
+    <div class="container-fluid bg-1 text-center" style="height: 10px;">
+    </div>
+
+</body>
+</html>
